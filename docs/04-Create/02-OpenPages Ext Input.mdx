@@ -1,0 +1,90 @@
+---
+title: OpenPages with External Input
+description: sample page
+custom_edit_url: null
+---
+<div style={{ borderBottom: '1px solid #000', marginTop: '20px', marginBottom: '20px' }}></div>
+
+## Overview
+------
+There are three core steps to build the components necessary to achieve the desired outcomes of the business case: 
+
+1. **Build OpenPages Library**
+    1. Create Assessment Template
+    2. Create Mandate and its MSR requirements
+
+2. **Configure OpenPages Vendor Management**
+    1. Create Business Entity and Vendor
+    2. Create Vendor SIG Assessment
+
+3. **Deploy and integrate watson<span style={{ color: '#3a60f6' }}>x</span>.ai functions**
+    1. Create and deploy WML functions with watson<span style={{ color: '#3a60f6' }}>x</span>.ai prompts.
+    2. Integrate to OpenPages platform
+    3. Leverage the appropriate generative AI Watson Machine Learning function to populate the relevant fields.
+
+## Build OpenPages Library
+-----
+
+### Create Assessment Template
+
+#### Create new assessment object
+
+
+#### Import Content via FastMap
+
+
+### Create Mandate
+
+#### Create relevant objects for Mandate
+
+
+
+#### Import Content via FastMap
+
+
+
+## Configure OpenPages Vendor Management
+----
+### Create relevant objects for new Vendor SIG
+1. Create Business Entity Object
+
+2. Create Vendor Object
+
+
+### Create Vendor SIG Assessment
+
+## Deploy and integrate watson<span style={{ color: '#3a60f6' }}>x</span>.ai functions
+------
+
+1. In watson<span style={{ color: '#3a60f6' }}>x</span>.ai create a new project. 
+2. Navigate to the "Manage" tab, select "Services and Integrations" in the side menu and associate a WML service.
+3. Navigate to the "Access Control" section in the side menu and select the "Access Tokens" tab. Select "New Access Token +", set an appropriate name and set the "Access Role" to "Editor". 
+    :::tip
+    Save the **Access Token** somewhere to be referenced later.
+    :::
+4. Navigate to the "Navigation Menu" in the top left of the watson<span style={{ color: '#3a60f6' }}>x</span> platfrom and select "Deployments".
+    ![nav_menu_ref](../../static/img/nav_menu_wxai.png)
+5. In the top right select "New deployment space +" and fill out the appropriate fields. Select the newly created deployment space.
+6. Navigate to the "Manage" tab, and select the "General" section in the side bar and copy the Space GUID to be reference for later.
+7. Navigate back to the "Navigation Menu" and select "IBM Cloud". In the IBM Cloud console select "Manage" in the top navigation bar and select Access (IAM) -> API keys and Create a new API key.
+     :::tip
+    Save the **API key** somewhere to be referenced later.
+    :::
+8. Navigate back to the watson<span style={{ color: '#3a60f6' }}>x</span> project and create and deploy the relevant WML functions.
+9. Once the functions are deployed got back to the deployment space that was created and save these values to be reference later:
+    1. **Base Deployment URL:** All content until `/deployments` (ex. `https://us-south.ml.cloud.ibm.com/ml/v4`)
+    2. **Deployment ID** 
+
+10. In the OpenPages platform, select the "Open Administration menu" icon in the top navigation bar and select "Integrations" -> "Custom Machine Learning Models" -> "New Model +".
+11. Under "Access Parameters" populate the following fields:
+* **API key:** from step 7 above.
+* **Base Deployment URL:** from step 9.i
+* **Deployment id:** from step 9.ii
+* **Space id:** from step 6
+and click "Next"
+
+12. Select the appropriate Object type to map to (ex. Question) and select either "Manual" or "Automatic".
+13. Map the WML function input to the appropriate OpenPages values.
+    ![wx_op_int_input](../../static/img/wx_op_int.png)
+14. Select the appropriate label for the output and the target field and select "Next"
+     ![wx_op_int_output](../../static/img/wx_op_out.png)
