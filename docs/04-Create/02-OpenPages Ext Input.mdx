@@ -7,53 +7,44 @@ custom_edit_url: null
 
 ## Overview
 ------
-There are three core steps to build the components necessary to achieve the desired outcomes of the business case: 
-
-1. Create OpenPages File Directory
+To achieve the desired outcomes outlined in the business case, the process is divided into three core groups. While it is not strictly required to follow the steps in this exact sequence, it is recommended, as this was the approach that was successfully carried out:
 
 1. **Build OpenPages Library**
-    1. Create Assessment Template
-    2. Create Mandate and its MSR requirements
+    1. Create OpenPages File Directory
+    2. Create Assessment Template
+    3. Create Mandate and its MSR requirements
 
-2. **Configure OpenPages Vendor Management**
-    1. Create Business Entity and Vendor
-    2. Create Vendor SIG Assessment
-
-3. **Deploy and integrate watson<span style={{ color: '#3a60f6' }}>x</span>.ai functions**
+2. **Deploy and integrate watson<span style={{ color: '#3a60f6' }}>x</span>.ai functions**
     1. Create and deploy WML functions with watson<span style={{ color: '#3a60f6' }}>x</span>.ai prompts.
     2. Integrate to OpenPages platform
     3. Leverage the appropriate generative AI Watson Machine Learning function to populate the relevant fields.
 
+3. **Configure OpenPages Vendor Management**
+    1. Create Business Entity and Vendor
+    2. Create Vendor SIG Assessment
+
+![method_2_create_flow](../../static/img/method_2_create.jpeg)
+
 ## Build OpenPages Library
 -----
+### Create OpenPages File Directory
+Create folder directory structure in OpenPages to set the groundwork to create the appropriate objects and import the relevant data inot the platform. 
+
+For example: 
+* Libraries/Assessment Templates/
+* Libraries/Regulations and Standards/
+* /Vendors/Vendor_1
+* etc.
 
 ### Create Assessment Template
+1. Create a new assessment object and create the relevant fields for the use case mentioned [here](/Overview/Methods/OpenPages%20Ext%20Input#2-an-assessment-template)
 
-#### Create new assessment object
+2. Populate FastMap file to import SIG questions and their relevant fields into the Assessment template.
 
-
-#### Import Content via FastMap
-
-
+3. [TODO: MSR context]
 ### Create Mandate
 
-#### Create relevant objects for Mandate
-
-
-
-#### Import Content via FastMap
-
-
-
-## Configure OpenPages Vendor Management
-----
-### Create relevant objects for new Vendor SIG
-1. Create Business Entity Object
-
-2. Create Vendor Object
-
-
-### Create Vendor SIG Assessment
+1. Populate FastMap file to import Requirements and the relevant MSR context to each SIG question number.
 
 ## Deploy and integrate watson<span style={{ color: '#3a60f6' }}>x</span>.ai functions
 ------
@@ -90,3 +81,11 @@ and click "Next"
     ![wx_op_int_input](../../static/img/wx_op_int.png)
 14. Select the appropriate label for the output and the target field and select "Next"
      ![wx_op_int_output](../../static/img/wx_op_out.png)
+
+## Configure OpenPages Vendor Management
+----
+### Create Vendor SIG Assessment
+
+1. Reformat the external vendor SIG file to align with the FastMap file structure, enabling its import into the OpenPages platform. This process facilitates the creation of a new Vendor SIG assessment and ensures the necessary data is populated accurately.
+
+2. Leverage the watsonx.ai models created above to populate the "Issue", "Gap" and "Recommendation" fields in the new Vendor SIG Assessment.
