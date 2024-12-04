@@ -1,0 +1,72 @@
+---
+title: Takeaways
+description: sample page
+custom_edit_url: null
+---
+<div style={{ borderBottom: '1px solid #000', marginTop: '20px', marginBottom: '20px' }}></div>
+
+## Overview
+------
+This document outlines two methods for leveraging watson<span style={{ color: '#3a60f6' }}>x</span>.ai to enhance a Third-Party Risk team’s capabilities with generative AI:
+### **Method 1:** watson<span style={{ color: '#3a60f6' }}>x</span>.ai Pipeline
+
+This method soley relies on the watson<span style={{ color: '#3a60f6' }}>x</span>.ai sdk and python to build a pipeline to achieve the desired outcomes. The pipeline consists of three core phases:
+1. Preprocess and embed relevant MSR context.
+2. Create golden truth or reference SIG to compare to new Vendor SIGs.
+3. Leverage generative AI to create an automated assessor report for each vendor SIG.
+
+### **Method 2:** OpenPages with External Input
+This method adapts the same core phases from method 1 to the the IBM OpenPages platform while leveraging an external data source as an input. This ensures consistency in achieving the desired outcomes while leveraging the enhanced capabilities and scalability of OpenPages and watson<span style={{ color: '#3a60f6' }}>x</span>.ai's generative-AI capabilities. The core phases include:
+1. Build OpenPages Library.
+2. Configure Openpages Vendor Management.
+3. Deploy and integrate watson<span style={{ color: '#3a60f6' }}>x</span>.ai models.
+
+## Takeaway #1
+------
+Starting with watson<span style={{ color: '#3a60f6' }}>x</span>.ai Pipeline presents numerous benefits, but ultimately is an insufficient long-term solution on it's own. 
+
+When IBM Client Engineering initially identified the First Line of Defense use case, the most pressing need for the client was to immediately empower the Third Party Risk assessors and help them manage their increasing workload. Therefore, the priority was to demonstrate how AI technology could augment their current standard operating procedures.
+Therefore, a watsonx.ai pipeline driven by python scripts would be the most immediate way to work with their current process.
+
+#### **watson<span style={{ color: '#3a60f6' }}>x</span>.ai Pipeline pros:**
+* Shows immediate value
+* Confirms technical feasibility for AI to solve a new problem
+* Does not mandate a process change for assessors
+ 
+#### **watson<span style={{ color: '#3a60f6' }}>x</span>.ai Pipeline cons:**
+* Does not address longer-term scalability, security, or efficiencies inherent in a more comprehensive solution.
+
+## Takeaway #2
+------
+A more comprehensive solution mandates a process improvement of moving from an Artifact-oriented process to an Object-Oriented process.
+
+**Current state: "Artifact-Oriented Approach"**
+
+The Third Party Risk team was working in an "Artifact-Oriented Process" - meaning all the information that Assessors were referencing, analyzing, or creating was housed within discrete documents (PDFs, excel spreadsheets, ppts, emails, etc). For example, vendors' SIG questionnaire responses were in excel spreadsheets, the security requirements were written out in a PDF, standardized issue information was noted in a separate spreadsheet, status reporting was manually aggregated and saved as PDF, and these artifacts were often shared via email and saved team folders.
+
+An artifact-oriented approach suffers from inherent inefficiencies and increased risk of human error. 
+* Working directly within documents has assessors switching between platforms in order to reconcile and cross-reference the information spread across multiple artifacts. 
+* Additionally, the very nature of working directly in documents increases the likelihood common human errors including version control and documents becoming lost in emails or incorrect system folders.
+ 
+While a watson<span style={{ color: '#3a60f6' }}>x</span>.ai pipeline focused on their artifact-oriented approach allows the team to immediately see the benefits of AI, it does not provide the long-term scalability, security, or efficiencies of an "Object-Oriented Approach".
+
+**Future state: "Object-Oriented Approach"**
+
+Instead of working directly within excel documents and PDFs, an Object-Oriented Approach instead grounds all information related to third party risk within the OpenPages platform, thereby enabling the scalability, security, and efficiency required for a long-term solution. For example, the vendor responses that were previously housed in separate excel spreadsheets will now coexist alongside the Minimum Security Requirements, information on standard issues, metadata on each control, vendors' risk profile, etc.
+
+## Takeaway #3
+-----
+**OpenPages is critical to the long-term success of this effort and future innovation projects in Third Party Risk.**
+
+While an AI pipeline on it's own offers valuable time savings for the use case it was designed for, it's impact is difficult to scale as there is little reuse for custom AI pipelines.
+The adoption of platforms like OpenPages provides an anchor point for future AI and other innovation projects, since native integrations with AI software and object-oriented taxonomy make it easier to test and deploy AI use cases.
+
+When the data inputs are standardized, AI use cases become much easier to test and deploy.
+OpenPages offers native integration to wx.ai to run AI pipelines, and also comes equipped for AI-ready use cases out of the box (with more to come as the product is enhanced by development teams).
+
+**Beyond enabling an object-oriented approach to third party risk, OpenPages platform provides the following benefits:**
+* **Further efficiencies via platform consolidation:** - Grounding all information related to third party risks in OpenPages (like Assessments, responses, Minimum Security Standards) is a worthwhile effort because it
+* **Deeper analysis on Vendors and Third Party Risk program**
+* **Increased awareness of enterprise risk and workload**
+* **Improved vendor relationships**
+* **Quicker time to testing and deploying AI use cases**
