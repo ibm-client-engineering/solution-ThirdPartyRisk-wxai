@@ -14,7 +14,7 @@ async function createconfig() {
       mermaid: true,
     },
     themes: ["@docusaurus/theme-mermaid", "@docusaurus/theme-live-codeblock"],
-    title: "Third Party Risk x wxai",
+    title: "Evaluating Third Party Risk with AI",
     tagline: "Build Faster. Together.",
     favicon: "img/favicon.ico",
 
@@ -130,7 +130,7 @@ async function createconfig() {
           },
         },
         navbar: {
-          title: "| Third Party Risk with watsonx.ai",
+          title: "| Evaluating Third Party Risk with AI",
           logo: {
             alt: "IBM Client Engineering Logo",
             src: "img/logo.svg",
