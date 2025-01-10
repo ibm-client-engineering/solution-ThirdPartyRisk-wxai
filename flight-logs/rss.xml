@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Third Party Risk x wxai Blog</title>
+        <title>Evaluating Third Party Risk with AI Blog</title>
         <link>https://ibm-client-engineering.github.io/solution-ThirdPartyRisk-wxai/flight-logs</link>
-        <description>Third Party Risk x wxai Blog</description>
+        <description>Evaluating Third Party Risk with AI Blog</description>
         <lastBuildDate>Fri, 01 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
